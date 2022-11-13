@@ -1,14 +1,11 @@
 import { RotateCw, Settings } from "lucide-react";
-import { FC, useState } from "react";
+import { FC } from "react";
+import routes from "../../helpers/routes";
 import Container from "../Container";
 import HeaderTabs from "../HeaderTabs";
 import Logo from "./Logo";
 
-interface HeaderProps {}
-
-const Header: FC<HeaderProps> = (props) => {
-    const {} = props;
-    const [activeTab, setActiveTab] = useState(0);
+const Header: FC = () => {
 
     return (
         <>
@@ -23,10 +20,13 @@ const Header: FC<HeaderProps> = (props) => {
                 <Container className="-mb-px">
                     <div className="flex items-center">
                         <HeaderTabs
-                            tabs={["خرید", "فروش"]}
-                            active={activeTab}
-                            onChange={setActiveTab}
+                            routes={[
+                                { name: "فروش", to: routes.sell },
+                                { name: "خرید", to: routes.buy },
+                                { name: "تبدیل", to: routes.convert },
+                            ]}
                         />
+
                         <div className="flex gap-4 mr-auto">
                             <button>
                                 <Settings

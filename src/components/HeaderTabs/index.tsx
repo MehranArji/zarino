@@ -1,32 +1,34 @@
 import clsx from "clsx";
-import { FC, ReactNode } from "react";
+import { FC } from "react";
+import { NavLink, To } from "react-router-dom";
 import Customizable from "../Customizable";
 
 interface HeaderTabsProps {
-    tabs?: ReactNode[];
-    active?: number;
-    onChange?: (tab: number) => void;
+    routes: {
+        to: To;
+        name: string;
+    }[];
 }
 
 const HeaderTabs: FC<HeaderTabsProps & Customizable> = (props) => {
-    const { className, tabs = [], active, onChange } = props;
+    const { className, routes } = props;
 
     return (
         <div className={clsx("flex justify-start", className)}>
-            {tabs.map((tab, index) => (
-                <button
-                    className={clsx(
-                        "text-slate-600 p-3 border-b transition-colors",
-                        {
-                            "border-b-amber-400": index === active,
-                            "border-b-transparent": index !== active,
-                        }
-                    )}
-                    onClick={() => onChange?.(index)}
+            {routes.map((route, index) => (
+                <NavLink
                     key={index}
+                    to={route.to}
+                    className={({ isActive }) =>
+                        clsx("p-3 border-b transition-colors", {
+                            "border-b-amber-400 text-amber-500": isActive,
+                            "border-b-transparent text-slate-600": !isActive,
+                        })
+                    }
+                    replace
                 >
-                    {tab}
-                </button>
+                    {route.name}
+                </NavLink>
             ))}
         </div>
     );

@@ -7,7 +7,7 @@ interface LogoProps {}
 const Logo: FC<LogoProps & Customizable> = (props) => {
     const { className } = props;
     return (
-        <p className={clsx("inline-block font-extrabold text-2xl", className)}>
+        <p className={clsx("inline-block font-black text-2xl", className)}>
             زرینو
         </p>
     );

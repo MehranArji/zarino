@@ -1,6 +1,6 @@
-import { Disclosure, Transition } from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
 import clsx from "clsx";
-import { FC, Fragment, ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import Customizable from "../Customizable";
 import ActionSheetIndicator from "./ActionSheetIndicator";
 
