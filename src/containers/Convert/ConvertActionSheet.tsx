@@ -1,6 +1,6 @@
 import { FC } from "react";
 import ActionSheet from "../../components/ActionSheet";
-import Container from "../../components/Container";
+import Container from "../../components/Wrapper";
 
 interface ConvertActionSheetProps {
     result750: number;

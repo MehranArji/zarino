@@ -9,6 +9,7 @@ import TabbedLayout from "./containers/TabbedLayout";
 import routes from "./helpers/routes";
 import Buy from "./containers/Buy";
 import Convert from "./containers/Convert";
+import AppWrapper from "./components/Wrapper/AppWrapper";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
@@ -17,7 +18,7 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
-                <Route element={<TabbedLayout />}>
+                <Route element={<AppWrapper><TabbedLayout /></AppWrapper>}>
                     <Route index element={<Navigate to={routes.sell} replace />} />
                     <Route path={routes.sell} element={<Sell />} />
                     <Route path={routes.buy} element={<Buy />} />

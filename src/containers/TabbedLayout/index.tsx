@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 
 const TabbedLayout: FC = () => {
     return (
-        <div className="min-h-screen bg-slate-100 flex flex-col pb-20">
+        <div className="bg-slate-100 flex flex-col h-full">
             <Header />
             <Outlet />
         </div>

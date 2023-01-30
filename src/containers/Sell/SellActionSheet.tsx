@@ -3,7 +3,7 @@ import {
 } from "lucide-react";
 import { FC } from "react";
 import ActionSheet from "../../components/ActionSheet";
-import Container from "../../components/Container";
+import Container from "../../components/Wrapper";
 import HistoryItem from "../../components/History/HistoryItem";
 
 interface SellActionSheetProps {

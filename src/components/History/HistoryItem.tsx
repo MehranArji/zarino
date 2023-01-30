@@ -1,6 +1,6 @@
 import { Scale, Banknote, Hammer, ChevronRight } from "lucide-react";
 import { FC } from "react";
-import Container from "../Container";
+import Container from "../Wrapper";
 
 interface HistoryItemProps {}
 

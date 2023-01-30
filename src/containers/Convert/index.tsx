@@ -1,7 +1,7 @@
 import { Coins } from "lucide-react";
 import { FC, useMemo, useState } from "react";
 import ActionSheet from "../../components/ActionSheet";
-import Container from "../../components/Container";
+import Container from "../../components/Wrapper";
 import InputRow from "../../components/InputRow";
 import InputRowLabel from "../../components/InputRow/InputRowLabel";
 import ConvertActionSheet from "./ConvertActionSheet";

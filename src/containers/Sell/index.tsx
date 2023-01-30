@@ -106,8 +106,16 @@ const Sell: FC = () => {
                     Submit
                 </button>
             </form>
+            <InputRow
+                className="text-left"
+                dir="ltr"
+                type="number"
+                disabled
+                value={result || "Shrug"}
+                label="مجموع"
+            />
 
-            <SellActionSheet result={result} />
+            {/* <SellActionSheet result={result} /> */}
         </>
     );
 };
