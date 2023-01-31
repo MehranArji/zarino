@@ -53,67 +53,68 @@ const Sell: FC = () => {
     return (
         <>
             <form
+                className="pb-60 sm:pb-0"
                 onSubmit={(ev) => {
                     ev.preventDefault();
                     onSubmit();
                 }}
             >
                 <InputRow
-                    className="text-left"
+                    inputMode="tel"
                     dir="ltr"
-                    type="number"
+                    className="text-left"
                     value={priceStr}
                     min={0}
                     step={500}
                     onFocus={(ev) => ev.target.select()}
                     onChange={(ev) => setPriceStr(ev.target.value)}
-                    label={<InputRowLabel title="نرخ" subtitle="تومان" />}
+                    label={<InputRowLabel title="نرخ" />}
                 />
                 <InputRow
-                    className="text-left"
+                    inputMode="tel"
                     dir="ltr"
-                    type="number"
+                    className="text-left"
                     value={profitStr}
                     min={0}
                     onFocus={(ev) => ev.target.select()}
                     onChange={(ev) => setProfitStr(ev.target.value)}
-                    label={<InputRowLabel title="سود" subtitle="درصد" />}
+                    label={<InputRowLabel title="سود" />}
                 />
                 <InputRow
-                    className="text-left"
+                    inputMode="tel"
                     dir="ltr"
-                    type="number"
+                    className="text-left"
                     ref={weightInputRef}
                     value={weightStr}
                     min={0}
                     step={0.01}
                     onFocus={(ev) => ev.target.select()}
                     onChange={(ev) => setWeightStr(ev.target.value)}
-                    label={<InputRowLabel title="وزن" subtitle="گرم" />}
+                    label={<InputRowLabel title="وزن" />}
                 />
                 <InputRow
+                    inputMode="tel"
                     className="text-left"
                     dir="ltr"
-                    type="number"
                     ref={wageInputRef}
                     value={wageStr}
                     min={0}
                     onFocus={(ev) => ev.target.select()}
                     onChange={(ev) => setWageStr(ev.target.value)}
-                    label={<InputRowLabel title="اجرت" subtitle="درصد" />}
+                    label={<InputRowLabel title="اجرت" />}
                 />
                 <button type="submit" className="sr-only" tabIndex={-1}>
                     Submit
                 </button>
+
+                <InputRow
+                    className="text-left"
+                    dir="ltr"
+                    disabled
+                    value={result?.toLocaleString() || "Shrug"}
+                    label="مجموع"
+                />
             </form>
-            <InputRow
-                className="text-left"
-                dir="ltr"
-                type="number"
-                disabled
-                value={result || "Shrug"}
-                label="مجموع"
-            />
 
             {/* <SellActionSheet result={result} /> */}
         </>
