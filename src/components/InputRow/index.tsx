@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { ComponentPropsWithoutRef, forwardRef, ReactNode } from "react";
-import Container from "../Container";
+import Container from "../Wrapper";
 
 interface InputRowProps {
     label?: ReactNode;
@@ -29,7 +29,7 @@ const InputRow = forwardRef<
                     <input
                         className={clsx(
                             "w-full",
-                            "text-2xl",
+                            "text-4xl",
                             "appearance-none",
                             "bg-transparent outline-none",
                             "disabled:cursor-not-allowed disabled:text-slate-400",

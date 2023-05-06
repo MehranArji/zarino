@@ -1,7 +1,7 @@
 import { Coins } from "lucide-react";
 import { FC } from "react";
 import ActionSheet from "../../components/ActionSheet";
-import Container from "../../components/Container";
+import Container from "../../components/Wrapper";
 
 interface BuyActionSheetProps {
     result?: number | null;

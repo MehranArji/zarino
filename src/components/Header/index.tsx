@@ -1,7 +1,7 @@
 import { RotateCw, Settings } from "lucide-react";
 import { FC } from "react";
 import routes from "../../helpers/routes";
-import Container from "../Container";
+import Container from "../Wrapper";
 import HeaderTabs from "../HeaderTabs";
 import Logo from "./Logo";
 
